@@ -1,15 +1,37 @@
 require("L5")
 
 function setup()
-  size(400, 400)
+  size(600, 600)
 
   -- Set the program title
-  windowTitle("Basic sketch")
+  windowTitle("Homework 5")
 
-  describe('Draws a yellow background')
+  describe('Draws a city scene')
 end
 
 function draw()
-  -- Fills the background with the color yellow
-  background(255, 215, 0)
+  -- Fills the background with the a dark blue
+  background(17, 16, 43)
+
+  -- draws gray rectangles/buildings
+  fill(128)
+  rect(0,  height * 0.40 , width / 4, height * 0.6)
+
+  rect(width / 4, height * 0.2, width / 4, height * 0.8)
+
+  rect(width / 2, height * 0.05, width / 4, height * 0.95)
+
+  rect(width * 0.75, height / 2, width /4, height / 2)
+
+  -- draws a dark gray rectangle
+  fill(54)
+  rect(0, height * 0.75, width / 1, height / 4)
+
+  -- draws a light gray, thin rectangle 
+  fill(166)
+  rect(0, height * 0.75, width / 1, height * 0.06)
+
+  -- draws yellow rectangles
+  fill(255, 225, 95)
+  rect(width * 0.03, height * 0.44, width * 0.05, height * 0.07)
 end
