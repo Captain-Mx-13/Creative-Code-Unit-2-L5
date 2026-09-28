@@ -12,7 +12,7 @@ end
 function draw()
   -- Fills the background with the a dark blue
   background(17, 16, 43)
-
+ 
   -- draws gray rectangles/buildings
   fill(128)
   rect(0,  height * 0.40 , width / 4, height * 0.6)
@@ -33,5 +33,26 @@ function draw()
 
   -- draws yellow rectangles
   fill(255, 225, 95)
-  rect(width * 0.03, height * 0.44, width * 0.05, height * 0.07)
+  rect(width * 0.04, height * 0.44, width * 0.05, height * 0.07)
+  rect(width * 0.15, height * 0.55, width * 0.05, height * 0.07)
+
+  rect(width * 0.29, height * 0.23, width * 0.05, height * 0.07)
+  rect(width * 0.29, height * 0.33, width * 0.05, height * 0.07)
+  rect(width * 0.40, height * 0.53, width * 0.05, height * 0.07)
+
+  rect(width * 0.54, height * 0.1, width * 0.05, height * 0.07)
+  rect(width * 0.65, height * 0.1, width * 0.05, height * 0.07)
+  rect(width * 0.54, height * 0.44, width * 0.05, height * 0.07)
+
+  rect(width * 0.91, height * 0.55, width * 0.05, height * 0.07)
+
+  --draws small dark gray rectangles
+  fill(54)
+  rect(width * 0.09, height * 0.67, width * 0.05, height * 0.08)
+
+  rect(width * 0.35, height * 0.67, width * 0.05, height * 0.08)
+
+  rect(width * 0.6, height * 0.67, width * 0.05, height * 0.08)
+
+  rect(width * 0.85, height * 0.67, width * 0.05, height * 0.08)
 end
