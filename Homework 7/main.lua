@@ -21,11 +21,11 @@ function draw()
   -- creates a line of growing circles that get darker in a random color
   for i = 1, 6, 1 do
     fill(ellipseColorR-i*15, ellipseColorG-i*15, ellipseColorB-i*15)
-    ellipse (300, 5+i*90, 20+i*10, 20+i*10)
+    ellipse (300, 1+i*90, 20+i*10, 20+i*10)
   end
 
   x = 700
-  y = 100
+  y = 150
 
   for i = 1, 9, 1 do
     if i%2 == 0 then
@@ -36,11 +36,11 @@ function draw()
 
     rect(x,y,100,100)
 
-    y = y + 65
+    y = y + 160
 
     if y >= 500 then
-    y = 100;
-    x = x + 35
+    y = 150;
+    x = x + 150
     end
   end
 end
