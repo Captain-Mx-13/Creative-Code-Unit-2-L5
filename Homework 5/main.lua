@@ -1,76 +1,46 @@
 require("L5")
 
 function setup()
-  size(600, 600)
+  size(1200, 600)
+  rectMode(CENTER)
+
 
   -- Set the program title
-  windowTitle("Homework 5")
+  windowTitle("Homework 7")
 
-  describe('Draws a city scene')
+  describe('Practicing For Loops')
+  ellipseColorR = (random(255))
+  ellipseColorG = (random(255))
+  ellipseColorB = (random(255))
 end
 
 function draw()
-  -- Fills the background with the a dark blue
-  background(17, 16, 43)
+  -- Fills the background with a light gray color
+  background(187)
 
-  -- draws a pale blue circle
-  fill(222, 230, 245)
-  ellipse(width * 0.85, height * 0.1, width * 0.1, height * 0.1)
- 
-  -- draws gray rectangles/buildings
-  fill(128)
-  rect(0,  height * 0.40 , width / 4, height * 0.6)
+  -- creates a line of growing circles that get darker in a random color
+  for i = 1, 6, 1 do
+    fill(ellipseColorR-i*15, ellipseColorG-i*15, ellipseColorB-i*15)
+    ellipse (300, 5+i*90, 20+i*10, 20+i*10)
+  end
 
-  rect(width / 4, height * 0.2, width / 4, height * 0.8)
+  x = 700
+  y = 100
 
-  rect(width / 2, height * 0.05, width / 4, height * 0.95)
+  for i = 1, 9, 1 do
+    if i%2 == 0 then
+      fill(255, 72, 176)
+    else
+      fill(0, 120, 191)
+    end
 
-  rect(width * 0.75, height / 2, width /4, height / 2)
+    rect(x,y,100,100)
 
-  -- draws a dark gray rectangle
-  fill(54)
-  rect(0, height * 0.75, width / 1, height / 4)
+    y = y + 65
 
-  -- draws a light gray, thin rectangle 
-  fill(166)
-  rect(0, height * 0.75, width / 1, height * 0.06)
-
-  -- draws yellow rectangles
-  fill(255, 225, 95)
-  rect(width * 0.04, height * 0.44, width * 0.05, height * 0.07)
-  rect(width * 0.15, height * 0.55, width * 0.05, height * 0.07)
-
-  rect(width * 0.29, height * 0.23, width * 0.05, height * 0.07)
-  rect(width * 0.29, height * 0.33, width * 0.05, height * 0.07)
-  rect(width * 0.40, height * 0.53, width * 0.05, height * 0.07)
-
-  rect(width * 0.54, height * 0.1, width * 0.05, height * 0.07)
-  rect(width * 0.65, height * 0.1, width * 0.05, height * 0.07)
-  rect(width * 0.54, height * 0.44, width * 0.05, height * 0.07)
-
-  rect(width * 0.91, height * 0.55, width * 0.05, height * 0.07)
-
-  --draws small dark gray rectangles
-  fill(54)
-  rect(width * 0.09, height * 0.67, width * 0.05, height * 0.08)
-
-  rect(width * 0.35, height * 0.67, width * 0.05, height * 0.08)
-
-  rect(width * 0.6, height * 0.67, width * 0.05, height * 0.08)
-
-  rect(width * 0.85, height * 0.67, width * 0.05, height * 0.08)
-
-  -- draws small black circles
-  fill(0)
-  ellipse(mouseX, height * 0.9, width * 0.04, height * 0.04)
-  ellipse(mouseX+55, height * 0.9, width * 0.04, height * 0.04)
-
-  -- draws yellow rectangles
-  fill(255, 228, 37)
-  rect(mouseX-8, height * 0.85, width * 0.12, height * 0.04)
-  rect(mouseX, height * 0.82, width * 0.1, height * 0.03)
-
-  -- draws a small white circle
-  fill(255)
-  ellipse(mouseX-4, height * 0.86, width * 0.02, height * 0.02)
+    if y >= 500 then
+    y = 100;
+    x = x + 35
+    end
+  end
 end
